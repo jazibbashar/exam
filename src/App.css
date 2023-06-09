@@ -1,38 +1,194 @@
-.App {
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.user-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 200px; /* Add margin-top to create blank space for the selected card */
+}
+
+.user-card {
+  width: 282px;
+  height: 110px; /* Adjust the height to make the card rectangular */
+  border: 1px solid #ccc;
+  gap: 0px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background-color 0.3s ease; /* Add transition for smooth color change */
+}
+
+.user-card.selected {
+  background-color: #A259FF;; /* Change the background color to purple */
+  border-color: purple;
+  color: white; /* Change the text color to white */
+}
+
+.user-card h3,
+.user-card p {
+  margin: 4px 0; /* Adjust the margin for the name, gender, and email */
+}
+
+.selected-card {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 200px;
+  border: 1px solid purple;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.user-card .name {
+  width: 100%;
+  height: auto;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  color: #000000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.user-card {
+  width: 282px;
+  height: 110px;
+  border: 1px solid #ccc;
+  gap: 0px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-start; /* Align items to the top */
+  align-items: flex-start; /* Align items to the left */
+  text-align: left; /* Adjust text alignment */
+  cursor: pointer;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.user-card.selected {
+  background-color: #A259FF;
+  border-color: purple;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.user-card h3,
+.user-card p {
+  margin: 4px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.user-card .name  {
+  width: 100%;
+  height: auto;
+  font-family: 'Roboto';
+  
+  font-style: normal;
+  text-align: center;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  color: #000000;
+  overflow: hidden;
+  
+  text-overflow: ellipsis;
+  white-space: nowrap;
+};
+.user-card .email {
+  width: 100%;
+  height: auto;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 150%;
+  text-align: center; /* Add text-align center */
+  color: #E16259;
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+
+.selected-card {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  width: 896px;
+  height: 201px;
+  max-height: calc(100vh - 100px); /* Adjust the maximum height to fit the screen */
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+  border: 1px solid purple;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.selected-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.selected-card h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.selected-card p {
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+
+.selected-card .newName{
+font-family: Roboto;
+font-style: Bold;
+color: #e16259;
+text-decoration: underline;
+Font-size: 64px;
+margin-top: 0px;
+line-height: 64px;
+line-height: 100%;
+align-items: Left;
+vertical-align: Top;
+Letter-spacing: -1.85px;
+Fill:  #E16259 Solid;
+}
+.selected-card .gender1{
+  margin-right: 340px;
 }
