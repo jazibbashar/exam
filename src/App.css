@@ -81,6 +81,7 @@ body {
   padding: 10px;
   border-radius: 10px;
   box-sizing: border-box;
+  text-transform: capitalize;
   display: flex;
   flex-direction: column;
   justify-content: flex-start; /* Align items to the top */
@@ -136,19 +137,21 @@ body {
 
 
 .selected-card {
-  position: fixed;
+  
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
   width: 300px;
   width: 896px;
   height: 201px;
-  max-height: calc(100vh - 100px); /* Adjust the maximum height to fit the screen */
-  overflow-y: auto; /* Enable vertical scrolling if needed */
+  background-color: #A259FF;
+  
+  
   border: 1px solid purple;
   padding: 20px;
   border-radius: 10px;
   background-color: #FFFFFF;
+  background-color: #A259FF;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
@@ -181,7 +184,7 @@ font-style: Bold;
 color: #e16259;
 text-decoration: underline;
 Font-size: 64px;
-margin-top: 0px;
+margin-top: -260px;
 line-height: 64px;
 line-height: 100%;
 align-items: Left;
@@ -190,5 +193,14 @@ Letter-spacing: -1.85px;
 Fill:  #E16259 Solid;
 }
 .selected-card .gender1{
-  margin-right: 340px;
+  margin-right: 300px;
+}
+.selected-card .image{
+  margin-right: 750px;
+  margin-bottom: 100px;
+}
+.selected-card .gender1{
+  font-weight: bold;
+  font-size: medium;
+  text-transform: capitalize;
 }

@@ -32,9 +32,9 @@ const UserCards = () => {
 
       {selectedUser && (
         <div className="selected-card">
-          <img src={selectedUser.picture.large} alt="User" />
+          <img className='image' src={selectedUser.picture.large} alt="User" />
           <h3 className='newName'>{selectedUser.name.first} {selectedUser.name.last}</h3>
-          <h3>{selectedUser.location.street.number} Born {selectedUser.location.city} {selectedUser.location.country} {selectedUser.location.postcode}</h3>
+          <h3>{selectedUser.location.street.number} Born {selectedUser.location.city} , {selectedUser.location.country} pincode : {selectedUser.location.postcode}</h3>
           <h3>{selectedUser.location.timezone.offset} {selectedUser.location.timezone.description}</h3>
           <p className="gender1">{selectedUser.gender}</p>
         </div>
